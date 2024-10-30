@@ -33,7 +33,7 @@ my_car = Car("Toyota", "Corolla")
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/lab1.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/1.png)
 
 ### Выводы
 
@@ -58,11 +58,11 @@ my_car.drive()
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/lab2.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/2.png)
 
 ### Выводы
 
-добавили метод drive
+Добавил метод drive.
 
 ## Лабораторная работа №3
 ### Создайте новый класс “ElectricCar” с методом “charge” и атрибутом
@@ -95,11 +95,11 @@ my_electric_car.charge()
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/lab3.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/3.png)
 
 ### Выводы
 
-Создали новый класс “ElectricCar” с методом “charge” и атрибутом емкость батареи
+Создали новый класс “ElectricCar” с методом “charge” и атрибутом "емкость батареи".
   
 ## Лабораторная работа №4
 ### Реализуйте инкапсуляцию для класса, созданного в первом задании.
@@ -126,11 +126,11 @@ my_car.drive()
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/lab4.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/4.png)
 
 ### Выводы
 
-добавили инкапсуляцию, сделав атрибуты приватными
+Использовали инкапсуляцию, сделав атрибуты приватными.
 
 ## Лабораторная работа №5
 ### Реализуйте полиморфизм создав основной (общий) класс “Shape”, а
@@ -171,11 +171,11 @@ print(my_circle.area())
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/lab5.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/5.png)
 
 ### Выводы
 
-добавили два класса наследника, где переопределили метод area, таким образом применив полиморфизм
+Добавили два класса наследника, где переопределили метод area, таким образом применив полиморфизм.
 
 ## Самостоятельная работа №1
 ### Самостоятельно создайте класс и его объект. Они должны
@@ -184,25 +184,22 @@ print(my_circle.area())
 ### задания будет листинг кода и получившийся вывод консоли.
 
 ```python
-class Hero:
-    def __init__(self, dmg):
-        self.dmg = dmg
+class Game:
+    def __init__(self, Game, Genre):
+        self.Game = Game
+        self.Genre = Genre
 
-    def Damage(self):
-        return self.dmg
-
-hero = Hero(500)
-print(hero.Damage())
+my_game = Game("Apex Legends", "Battle Royale")
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/sam1.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/6.png)
 
 ### Выводы
 
-1. `class Hero:` создаем класс Hero
-2. `def __init__(self, dmg):` конструктор класса
-3. `hero = Hero(500)` создаем объект класса
+1. `class Game:` создаем класс Game
+2. `def __init__(self, Game, Genre):` конструктор класса
+3. `my_game = Game("Apex Legends", "Battle Royale")` создаем объект класса
   
 ## Самостоятельная работа №2
 ### Самостоятельно создайте атрибуты и методы для ранее созданного
@@ -212,29 +209,24 @@ print(hero.Damage())
 ### получившийся вывод консоли.
 
 ```python
-class Hero:
-    def __init__(self, dmg, golos):
-        self.dmg = dmg
-        self.golos = golos
+class Game:
+    def __init__(self, Game, Genre):
+        self.Game = Game
+        self.Genre = Genre
 
-    def Damage(self):
-        return self.dmg
+    def playing(self):
+        print(f"Я играю в {self.Game} жанра {self.Genre}")
 
-    def Golos(self):
-        return self.golos
-
-hero = Hero(500, "Hero Never die")
-print(hero.Damage())
-print(hero.Golos())
+my_game = Game("Apex Legends", "Battle Royale")
+my_game.playing()
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/sam2.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/7.png)
 
 ### Выводы
 
-1. `def __init__(self, dmg, golos):` добавил атрибут golos
-2. `def Golos(self):` добавил метод Golos, который возвращает golos
+1. `def playing(self):` добавил метод playing, который возвращает то, во что мы играли.
   
 ## Самостоятельная работа №3
 ### Самостоятельно реализуйте наследование, продолжая работать с
@@ -245,36 +237,41 @@ print(hero.Golos())
 
 
 ```python
-class Hero:
-    def __init__(self, dmg):
-        self.dmg = dmg
-        self.golos = "Hero Never die"
+class Game:
+    def __init__(self, Game, Genre):
+        self.Game = Game
+        self.Genre = Genre
 
-    def Damage(self):
-        return self.dmg
+    def playing(self):
+        print(f"Я играю в {self.Game} жанра {self.Genre}")
 
-    def Golos(self):
-        return self.golos
+my_game = Game("Apex Legends", "Battle Royale")
+my_game.playing()
 
-class Skopos(Hero):
-    def __init__(self, dmg):
-        super().__init__(dmg)
-        self.golos = "Oh my god!"
-hero = Hero(500)
-skopos = Skopos(12)
-print(hero.Golos())
-print(skopos.Golos())
+class TopOneHundredGames(Game):
+    def __init__(self, Game, Genre, place):
+        super().__init__(Game,Genre)
+        self.place = place
+
+    def OccupiedPlace(self):
+        print(f"Игра {self.Game} из жанра {self.Genre} заняла {self.place} место")
+
+
+my_game = TopOneHundredGames("Hunt:Showdown", "Battle Royale", "2")
+my_game.playing()
+my_game.OccupiedPlace()
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/sam3.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/8.png)
 
 ### Выводы
 
-1. `class Skopos(Hero):` создаем класс Skopos у наследуемый от класса Hero
-2. `super().__init__(dmg)` передаем аргумент в конструктор родительского класса
-3. `self.golos = "Oh my god!"` переопределяем golos 
-4. `skopos = Skopos(12)` создаем объект класса Skopos
+Мы определяем новый класс TopOneHundredGames, который наследует от класса Game. Это значит, что он будет иметь все атрибуты и методы класса Game.
+Здесь тоже должен быть метод __init__. Этот метод вызывает конструктор родительского класса (Game) с помощью super(), чтобы инициализировать атрибуты Game и добавляет новый атрибут place, который указывает место игры в топ-100.
+Метод OccupiedPlace выводит сообщение о том, на каком месте в топе находится игра, вместе с ее названием и жанром.
+В конце мы создаем объект my_game класса TopOneHundredGames, передавая ему название игры "Hunt: Showdown", жанр "Battle Royale" и место "2". Затем вызываем методы playing и OccupiedPlace, чтобы вывести информацию об игре и ее месте в топе.
+
   
 ## Самостоятельная работа №4
 ### Самостоятельно реализуйте инкапсуляцию, продолжая работать с
@@ -284,46 +281,44 @@ print(skopos.Golos())
 ### получившийся вывод консоли.
 
 ```python
-class Hero:
-    def __init__(self, dmg):
-        self.__dmg = dmg
-        self.golos = "Hero Never die"
+class Game:
+    def __init__(self, Game, Genre):  # Исправлено на __init__
+        self._Game = Game
+        self.__Genre = Genre
 
-    def Damage(self):
-        return self.__dmg
+    def playing(self):
+        print(f"Я играю в {self._Game} жанра {self.__Genre}")
 
-    def Golos(self):
-        return self.golos
+# Создание объекта класса Game
+my_game = Game("Apex Legends", "Battle Royale")
+my_game.playing()
 
-    def set_damage(self, new_dmg):
-        if new_dmg >= 50:
-            self.__dmg = new_dmg
-        else:
-            print("Слабенький")
+class TopOneHundredGames(Game):
+    def __init__(self, Game, Genre, place):  # Исправлено на __init__
+        super().__init__(Game, Genre)  # Исправлено на __init__
+        self._place = place
 
-class Skopos(Hero):
-    def __init__(self, dmg):
-        super().__init__(dmg)
-        self.golos = "Oh my god!"
-hero = Hero(500)
-skopos = Skopos(12)
-print(hero.Golos())
-print(skopos.Golos())
+    def OccupiedPlace(self):
+        print(f"Игра {self._Game} из жанра {self._Game} заняла {self._place} место")
 
-print(hero.Damage())
-hero.set_damage(100)
-print(hero.Damage())
-hero.set_damage(42)
+# Создание объекта класса TopOneHundredGames
+my_game = TopOneHundredGames("Hunt: Showdown", "Battle Royale", "2")
+my_game.playing()
+my_game.OccupiedPlace()
+
 ```
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/sam4.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/9.png)
 
 ### Выводы
 
-1. `self.__dmg = dmg` делаем dmg приватным
-2. `def Damage(self)` добавляем геттер
-3. `def set_damage(self, new_dmg):` добавляем сеттер
+Атрибут __Genre объявлен как приватный (с двумя подчеркиваниями).
+Атрибут _Game объявлен как защищенный (с одним подчеркиванием).
+Метод playing предоставляет способ получить информацию о текущем состоянии объекта, не позволяя напрямую изменять значения атрибутов _Game и __Genre. 
+В классе TopOneHundredGames используется наследование от класса Game. Однако, даже в подклассе, доступ к приватным атрибутам родительского класса ограничен. Например, self.__Genre не может быть доступен напрямую в методе OccupiedPlace, что демонстрирует принцип инкапсуляции.
+
+
   
 ## Самостоятельная работа №5
 ### Самостоятельно реализуйте полиморфизм. Он должен отличаться, от того, что указан в теоретическом материале (методичке) и
@@ -331,46 +326,54 @@ hero.set_damage(42)
 ### листинг кода и получившийся вывод консоли.
 
 ```python
-class Hero:
-    def __init__(self, dmg):
-        self.__dmg = dmg
+class Game:
+    def __init__(self, name, genre):
+        self._name = name
+        self._genre = genre  # Изменено на одно подчеркивание
 
-    def Damage(self):
-        return self.__dmg
+    def playing(self):
+        print(f"Я играю в {self._name} жанра {self._genre}")
 
-    def Golos(self):
-        return "Hero Never die"
+    def get_info(self):
+        return f"Игра: {self._name}, Жанр: {self._genre}"
 
-    def set_damage(self, new_dmg):
-        if new_dmg >= 50:
-            self.__dmg = new_dmg
-        else:
-            print("Слабенький")
 
-class Skopos(Hero):
-    def __init__(self, dmg):
-        super().__init__(dmg)
-    def Golos(self):
-        return "Oh my god!"
-class Bandit (Hero):
-    def __init__(self,dmg):
-        super().__init__(dmg)
+class TopOneHundredGames(Game):
+    def __init__(self, name, genre, place):
+        super().__init__(name, genre)
+        self._place = place
 
-    def Golos(self):
-        return "Privet"
-heroes = [Hero(100), Skopos(34), Bandit(211)]
+    def OccupiedPlace(self):
+        print(f"Игра {self._name} из жанра {self._genre} заняла {self._place} место")
 
-for hero in heroes:
-    print(hero.Golos()) 
+    def get_info(self):  # Переопределяем метод get_info
+        return f"Игра: {self._name}, Жанр: {self._genre}, Место в топ-100: {self._place}"
+
+
+# Создание объектов классов
+my_game = Game("Apex Legends", "Battle Royale")
+my_game.playing()
+print(my_game.get_info())  # Вывод информации об игре
+
+top_game = TopOneHundredGames("Hunt: Showdown", "Battle Royale", "2")
+top_game.playing()
+top_game.OccupiedPlace()
+print(top_game.get_info())  # Вывод информации о топовой игре
 ```
 
 ### Результат.
 
-![Меню](https://github.com/ANARKI-MOOZ/SoftwareEngineering/blob/Тема_8/pic/sam5.png)
+![Меню](https://github.com/0ffshoreee/SoftwareEngineering/blob/Tema_8/Tema8/Pic/10.png)
 
 ### Выводы
 
-переопределяем метод Golos в Skopos и Bandit, таким образом получаем полиморфизм
+Теперь, когда мы вызываем метод get_info для объекта класса Game и объекта класса TopOneHundredGames, поведение будет различаться:
+
+• Для Game будет возвращена базовая информация.
+
+• Для TopOneHundredGames будет возвращена информация с учетом места в топе. 
+
+Это демонстрирует полиморфизм, когда метод с одинаковым именем ведет себя по-разному в зависимости от класса.
 
 ## Общие выводы по теме
 Базово освоил работу в ооп стиле на python. А если точнее познакомился с классами, их конструкторами, полиморфизмом и инкапсуляцией, а также наследованием
